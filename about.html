@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art Factory's Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+      <!--about page-->
+      <section class="sub-header">
+        <nav>
+          <!--logo-->
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+          <!--nav links-->
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="https://www.overjoyed.xyz/home">Shop</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <!--nav bar-->
+          <span onclick="openNav()">
+            <div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </span>
+        </nav>
+        <!-- about company -->
+        <div class="family"></div>
+        <div class="row">
+          <div class="col-1">
+            <h1>Our<br>Family</h1>
+            <p>Come, join our family.</p>
+            <a href="contact.html" class="btn">Call us</a>
+            <ul>
+                <li class="fbtn active"></li>
+                <li class="fbtn"></li>
+                <li class="fbtn"></li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <img src="images/pic2.jpeg" alt="work family" id="banner">
+          </div>
+        </div>
+        <section class="aboutus">
+          <div class="hidden">
+            <div class="row">
+              <div class="about-col">
+                <h1>We are Singapore's Best<br>Interior Designer</h1>     
+                <p>Established in 2022, We have made a remarkable progress in recieving The Michellin Interior Designer Award, along with several high profile clients not only from Singapore but from other metropolitan cities such as New York, London, Amsterdam, South Korea and Indonesia. We are currently in midst of expanding our company to other reigons.</p>
+            </div>
+          </div>
+            </div>  
+        </section>  
+
+        <script>
+            var dbtn = document.getElementsByClassName("fbtn");
+
+            var banner = document.getElementById("banner");
+
+            dbtn[0].onclick = function(){
+                banner.src = "images/pic1.webp";
+                animation();
+                this.classList.add("active");
+            }
+
+            dbtn[1].onclick = function(){
+                banner.src = "images/pic3.jpeg";
+                animation();
+                this.classList.add("active");
+            }
+
+            dbtn[2].onclick = function(){
+                banner.src = "images/pic2.jpeg";
+                animation();
+                this.classList.add("active");
+            }
+
+            function animation(){
+                banner.classList.add("zoom");
+                setTimeout(function(){
+                    banner.classList.remove("zoom");
+                },400);
+
+                for (i = 0; i < fbtn.length; i++) {
+                fbtn[i].classList.remove("active");
+                }
+            }
+
+        </script> 
+      </section>
+    </body>
+</html>
